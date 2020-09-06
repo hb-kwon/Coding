@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c12931.c                                           :+:      :+:    :+:   */
+/*   c12934.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwon <kwon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 21:04:40 by kwon              #+#    #+#             */
-/*   Updated: 2020/09/06 20:21:02 by kwon             ###   ########.fr       */
+/*   Created: 2020/09/06 17:25:02 by kwon              #+#    #+#             */
+/*   Updated: 2020/09/06 17:56:01 by kwon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//자릿수 더하기
-//10으로 나눈 나머지를 더하고 10을 나눠서 10^n자리의 자릿수를 더한다
+//정수 제곱근 판별
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 
-int solution(int n) {
-    int answer = 0;
-    
-    while(n !=0)
-    {
-        answer += n%10;
-        n /= 10;
-    }
+long long solution(long long n) {
+    long long answer = 0;
+    long long i = 0;
+
+	while (i * i < n)
+		i++;
+	if (i * i == n)
+        answer = (i+1)*(i+1);
+    else
+        answer = -1;
     return answer;
 }

@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c12931.c                                           :+:      :+:    :+:   */
+/*   c12937.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwon <kwon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 21:04:40 by kwon              #+#    #+#             */
-/*   Updated: 2020/09/06 20:21:02 by kwon             ###   ########.fr       */
+/*   Created: 2020/09/06 17:56:48 by kwon              #+#    #+#             */
+/*   Updated: 2020/09/06 17:58:45 by kwon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//자릿수 더하기
-//10으로 나눈 나머지를 더하고 10을 나눠서 10^n자리의 자릿수를 더한다
+//짝수와 홀수
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 
-int solution(int n) {
-    int answer = 0;
-    
-    while(n !=0)
-    {
-        answer += n%10;
-        n /= 10;
-    }
+char* solution(int num) {
+    char* answer = (char*)malloc(10000);
+    if(num%2 == 0)
+        answer = "Even";
+    else
+        answer = "Odd";
     return answer;
 }
