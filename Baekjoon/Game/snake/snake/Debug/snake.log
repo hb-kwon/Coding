@@ -1,3 +1,0 @@
-﻿  snake.c
-C:\Users\kwon\Desktop\Coding_EX\Game\snake\snake\snake.c(138,9): warning C4101:  'j': unreferenced local variable
-  snake.vcxproj -> C:\Users\kwon\Desktop\Coding_EX\Game\snake\Debug\snake.exe
