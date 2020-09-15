@@ -1,57 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c2579.c                                            :+:      :+:    :+:   */
+/*   c1463.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwon <kwon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/13 20:57:56 by kwon              #+#    #+#             */
-/*   Updated: 2020/09/15 16:01:53 by kwon             ###   ########.fr       */
+/*   Created: 2020/09/15 16:04:45 by kwon              #+#    #+#             */
+/*   Updated: 2020/09/15 17:25:03 by kwon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//계단 오르기
+//1로 만들기
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
-int max(int a, int b)
+int min(int a, int b)
 {
-    return (a>b ? a : b);
+    return (a>b ? b : a);
 }
-
 int main(void)
 {
     int n;
+    int arr[1000001];
     int i;
-    int stair[301];
-    int score[301];
+
     scanf("%d",&n);
 
-    i = 1;
-    while(i<=n)
+    arr[1]=0;
+    i = 2;
+    while (i<=n)
     {
-        scanf("%d",&stair[i]);
+        arr[i] = arr[i-1] + 1;
+        if(i % 2 == 0) arr[i] = min(arr[i], arr[i/2]+1);
+        if(i % 3 == 0) arr[i] = min(arr[i], arr[i/3]+1);
         i++;
     }
-    /*
-    for(int i=0; i<n; i++)
-        scanf("%d",&stair[i]);
-    */
-    score[1] = stair[1];
-    score[2] = stair[1] + stair[2];
-    i = 3;
-    while(i<=n)
-    {
-        score[i] = max(score[i-2], score[i-3]+stair[i-1])+stair[i];
-        i++;
-    }
-    /*
-    for(int i=3; i<=n; i++)
-        score[i] = max(score[i-2], score[i-3]+score[i-1])+stair[i];
-    */
-    
-    printf("%d\n",score[n]);
+    printf("%d\n",arr[n]);
     return (0);
+    
 }
