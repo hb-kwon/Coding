@@ -1,6 +1,6 @@
 # 하루 4문제 알고리즘 문제풀이
 
-# Backjoon
+## Backjoon
 
 - 그리디 알고리즘
     - ATM
@@ -28,8 +28,16 @@
     - 계단 오르기
     - 정수 삼각형
     - 파도반 수열
+    - 1로 만들기
 
-# Programmers
+- 스택
+    - 스택
+    - 제로
+    - 괄호(retry using stack)
+    - 균형잡힌 세상(x)
+
+
+## Programmers
 
 - Level1/C 
     - 2016년
