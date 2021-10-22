@@ -12,6 +12,7 @@
 
 //괄호
 //프로그래머스의 올바른 괄호와 같은 문제
+//스택을 활용해서 다시 풀어보기
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,18 +24,18 @@ int main(void)
     int i;
     int j;
     int cnt;
-    char braket[51];
+    char bracket[51];
 
     scanf("%d",&n);
     i = 0;
     while(i<n)
     {
-        scanf("%s",braket);
+        scanf("%s",bracket);
         cnt = 0;
         j = 0;
-        while(braket[j] != '\0')
+        while(bracket[j] != '\0')
         {
-            if(braket[j] == '(')
+            if(bracket[j] == '(')
                 cnt++;
             else
                 cnt--;

@@ -6,7 +6,7 @@
 /*   By: kwon <kwon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 19:31:21 by kwon              #+#    #+#             */
-/*   Updated: 2020/09/15 19:44:58 by kwon             ###   ########.fr       */
+/*   Updated: 2020/09/17 20:44:28 by kwon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,12 @@ int b_bracket(char *s)
         return 0;
     else if(b_cnt == 0)
         return 1;
+}
+
+int main(void)
+{
+    char *s;
+
+    while()
+
 }
